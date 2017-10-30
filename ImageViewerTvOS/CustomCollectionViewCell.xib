@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="13196" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="oto-4h-l1j" customClass="CustomCollectionViewCell" customModule="ImageViewerTvOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="318"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="392" height="318"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gjV-7f-hkm">
+                        <rect key="frame" x="0.0" y="0.0" width="392" height="318"/>
+                    </imageView>
+                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRh-6a-mXl" userLabel="Shadow View">
+                        <rect key="frame" x="0.0" y="216" width="99" height="102"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jv-Rg-woT">
+                        <rect key="frame" x="8" y="286" width="42" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSM-1x-OiG">
+                        <rect key="frame" x="8" y="232" width="75" height="46"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="gjV-7f-hkm" firstAttribute="leading" secondItem="oto-4h-l1j" secondAttribute="leading" id="5Sq-Rr-xpG"/>
+                <constraint firstItem="gjV-7f-hkm" firstAttribute="top" secondItem="oto-4h-l1j" secondAttribute="top" id="GKL-qU-oRq"/>
+                <constraint firstItem="xSM-1x-OiG" firstAttribute="leading" secondItem="oto-4h-l1j" secondAttribute="leading" constant="8" id="NtZ-8Q-q9I"/>
+                <constraint firstAttribute="bottom" secondItem="xRh-6a-mXl" secondAttribute="bottom" id="Srk-UL-pTb"/>
+                <constraint firstAttribute="bottom" secondItem="5jv-Rg-woT" secondAttribute="bottom" constant="8" id="U3a-I8-Z5D"/>
+                <constraint firstItem="xRh-6a-mXl" firstAttribute="leading" secondItem="oto-4h-l1j" secondAttribute="leading" id="pxg-9h-gGo"/>
+                <constraint firstItem="xSM-1x-OiG" firstAttribute="top" secondItem="xRh-6a-mXl" secondAttribute="top" constant="16" id="rBp-4b-561"/>
+                <constraint firstAttribute="bottom" secondItem="gjV-7f-hkm" secondAttribute="bottom" id="sOh-MW-fzX"/>
+                <constraint firstItem="xRh-6a-mXl" firstAttribute="trailing" secondItem="xSM-1x-OiG" secondAttribute="trailing" constant="16" id="vAt-WI-H9I"/>
+                <constraint firstItem="5jv-Rg-woT" firstAttribute="top" secondItem="xSM-1x-OiG" secondAttribute="bottom" constant="8" id="w7j-Y0-DxG"/>
+                <constraint firstItem="5jv-Rg-woT" firstAttribute="leading" secondItem="xSM-1x-OiG" secondAttribute="leading" id="xJT-uo-A4e"/>
+                <constraint firstAttribute="trailing" secondItem="gjV-7f-hkm" secondAttribute="trailing" id="zqD-vj-BOw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vfc-uK-xT0"/>
+            <size key="customSize" width="392" height="318"/>
+            <connections>
+                <outlet property="imageView" destination="gjV-7f-hkm" id="88m-Cb-zZ1"/>
+                <outlet property="locationLabel" destination="5jv-Rg-woT" id="krR-Hj-waU"/>
+                <outlet property="titleLabel" destination="xSM-1x-OiG" id="uJD-XZ-gBS"/>
+            </connections>
+            <point key="canvasLocation" x="-67" y="68"/>
+        </collectionViewCell>
+    </objects>
+</document>

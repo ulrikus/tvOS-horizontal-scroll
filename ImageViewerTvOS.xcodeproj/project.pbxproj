@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		450EC0331FA740B6000252DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450EC0321FA740B6000252DA /* AppDelegate.swift */; };
-		450EC0351FA740B6000252DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450EC0341FA740B6000252DA /* ViewController.swift */; };
+		450EC0351FA740B6000252DA /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450EC0341FA740B6000252DA /* CollectionViewController.swift */; };
 		450EC0381FA740B6000252DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450EC0361FA740B6000252DA /* Main.storyboard */; };
 		450EC03A1FA740B7000252DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450EC0391FA740B7000252DA /* Assets.xcassets */; };
 		450EC0451FA740B7000252DA /* ImageViewerTvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450EC0441FA740B7000252DA /* ImageViewerTvOSTests.swift */; };
 		450EC0501FA740B7000252DA /* ImageViewerTvOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450EC04F1FA740B7000252DA /* ImageViewerTvOSUITests.swift */; };
+		450EC0601FA74893000252DA /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450EC05F1FA74893000252DA /* CustomCollectionViewCell.swift */; };
+		450EC0621FA74C1A000252DA /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 450EC0611FA74C1A000252DA /* CustomCollectionViewCell.xib */; };
+		450EC0641FA7509F000252DA /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450EC0631FA7509F000252DA /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +38,7 @@
 /* Begin PBXFileReference section */
 		450EC02F1FA740B6000252DA /* ImageViewerTvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageViewerTvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		450EC0321FA740B6000252DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		450EC0341FA740B6000252DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		450EC0341FA740B6000252DA /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		450EC0371FA740B6000252DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		450EC0391FA740B7000252DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		450EC03B1FA740B7000252DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +48,9 @@
 		450EC04B1FA740B7000252DA /* ImageViewerTvOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageViewerTvOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		450EC04F1FA740B7000252DA /* ImageViewerTvOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerTvOSUITests.swift; sourceTree = "<group>"; };
 		450EC0511FA740B7000252DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		450EC05F1FA74893000252DA /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		450EC0611FA74C1A000252DA /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		450EC0631FA7509F000252DA /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +102,11 @@
 			isa = PBXGroup;
 			children = (
 				450EC0321FA740B6000252DA /* AppDelegate.swift */,
-				450EC0341FA740B6000252DA /* ViewController.swift */,
+				450EC0341FA740B6000252DA /* CollectionViewController.swift */,
 				450EC0361FA740B6000252DA /* Main.storyboard */,
+				450EC05F1FA74893000252DA /* CustomCollectionViewCell.swift */,
+				450EC0611FA74C1A000252DA /* CustomCollectionViewCell.xib */,
+				450EC0631FA7509F000252DA /* Helpers.swift */,
 				450EC0391FA740B7000252DA /* Assets.xcassets */,
 				450EC03B1FA740B7000252DA /* Info.plist */,
 			);
@@ -230,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				450EC03A1FA740B7000252DA /* Assets.xcassets in Resources */,
+				450EC0621FA74C1A000252DA /* CustomCollectionViewCell.xib in Resources */,
 				450EC0381FA740B6000252DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				450EC0351FA740B6000252DA /* ViewController.swift in Sources */,
+				450EC0351FA740B6000252DA /* CollectionViewController.swift in Sources */,
+				450EC0601FA74893000252DA /* CustomCollectionViewCell.swift in Sources */,
 				450EC0331FA740B6000252DA /* AppDelegate.swift in Sources */,
+				450EC0641FA7509F000252DA /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
