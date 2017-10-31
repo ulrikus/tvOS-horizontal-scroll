@@ -1,0 +1,18 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+    {
+      "name" : "Ouroboros",
+      "hash" : "89db0a8c49cbef945cca746aee2d6279c10aa714d703ccbecd728d5d8504f401"
+    }
+  ],
+  "commitish" : "0.2.1",
+  "iOS" : [
+
+  ]
+}
