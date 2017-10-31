@@ -16,6 +16,7 @@
 		450EC0601FA74893000252DA /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450EC05F1FA74893000252DA /* CustomCollectionViewCell.swift */; };
 		450EC0621FA74C1A000252DA /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 450EC0611FA74C1A000252DA /* CustomCollectionViewCell.xib */; };
 		450EC0641FA7509F000252DA /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450EC0631FA7509F000252DA /* Helpers.swift */; };
+		450EC0691FA7751D000252DA /* Ouroboros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450EC0681FA7751D000252DA /* Ouroboros.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		450EC05F1FA74893000252DA /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		450EC0611FA74C1A000252DA /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		450EC0631FA7509F000252DA /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		450EC0681FA7751D000252DA /* Ouroboros.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ouroboros.framework; path = Carthage/Build/tvOS/Ouroboros.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				450EC0691FA7751D000252DA /* Ouroboros.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +88,7 @@
 				450EC0431FA740B7000252DA /* ImageViewerTvOSTests */,
 				450EC04E1FA740B7000252DA /* ImageViewerTvOSUITests */,
 				450EC0301FA740B6000252DA /* Products */,
+				450EC0671FA7751D000252DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +135,14 @@
 			path = ImageViewerTvOSUITests;
 			sourceTree = "<group>";
 		};
+		450EC0671FA7751D000252DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				450EC0681FA7751D000252DA /* Ouroboros.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +153,7 @@
 				450EC02B1FA740B6000252DA /* Sources */,
 				450EC02C1FA740B6000252DA /* Frameworks */,
 				450EC02D1FA740B6000252DA /* Resources */,
+				450EC06A1FA77532000252DA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -259,6 +272,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		450EC06A1FA77532000252DA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/tvOS/Ouroboros.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Ouroboros.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		450EC02B1FA740B6000252DA /* Sources */ = {
@@ -427,6 +458,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B56SMCV7PR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = ImageViewerTvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FINN.Ulrik.ImageViewerTvOS;
@@ -443,6 +478,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B56SMCV7PR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = ImageViewerTvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FINN.Ulrik.ImageViewerTvOS;
